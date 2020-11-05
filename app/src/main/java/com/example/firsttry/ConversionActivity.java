@@ -7,15 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
-    Button unitConversion;
+public class ConversionActivity extends AppCompatActivity {
+    Button time;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_conversion);
 
-        unitConversion=findViewById(R.id.buttonUC);
-        unitConversion.setOnClickListener(new View.OnClickListener() {
+
+        time=findViewById(R.id.button_time);
+        time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openNewActivity();
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void openNewActivity(){
-        Intent intent=new Intent(this, ConversionActivity.class);
+        Intent intent=new Intent(this, timeActivity.class);
         startActivity(intent);
     }
 }
