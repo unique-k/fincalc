@@ -1,4 +1,4 @@
-package com.example.firsttry;
+package com.example.FINCALC;
 
 import org.junit.Test;
 

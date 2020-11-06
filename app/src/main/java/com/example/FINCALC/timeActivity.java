@@ -1,4 +1,4 @@
-package com.example.firsttry;
+package com.example.FINCALC;
 
 import androidx.appcompat.app.AppCompatActivity;
 
