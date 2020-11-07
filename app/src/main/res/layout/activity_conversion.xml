@@ -34,6 +34,7 @@
         android:id="@+id/button_length"
         android:layout_width="147dp"
         android:layout_height="149dp"
+        android:onClick="openLengthActivity"
         android:text="Length"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

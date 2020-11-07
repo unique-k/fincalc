@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.FINCALC.APRActivity"></activity>
-        <activity android:name="com.example.FINCALC.LoanActivity" />
-        <activity android:name="com.example.FINCALC.timeActivity" />
-        <activity android:name="com.example.FINCALC.ConversionActivity" />
-        <activity android:name="com.example.FINCALC.MainActivity">
+        <activity android:name=".lengthActivity"></activity>
+        <activity android:name=".APRActivity" />
+        <activity android:name=".LoanActivity" />
+        <activity android:name=".timeActivity" />
+        <activity android:name=".ConversionActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -27,4 +27,8 @@ public class ConversionActivity extends AppCompatActivity {
         Intent intent=new Intent(this, timeActivity.class);
         startActivity(intent);
     }
+    public void openLengthActivity(View View){
+        Intent intent=new Intent(this,lengthActivity.class);
+        startActivity(intent);
+    }
 }
