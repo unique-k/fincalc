@@ -45,9 +45,8 @@ public class timeActivity extends AppCompatActivity {
                 float minutes=0,hours=0,days=0,years=0,seconds=0; // initializing output values to be 0
 
                 //==========Output 0 if pressed calculate without any input=======================//
-                if(input.getText().toString().length()==0){
-                    //input.setText("0");
-                    seconds=0;
+                if(input.getText().toString().trim().length() == 0){
+                    input.setText("0");
                 }
                 //=================Converting any given unit of time in seconds===================//
                 else if(spin.getSelectedItem().toString()=="seconds")

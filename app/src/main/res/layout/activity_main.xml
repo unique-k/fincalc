@@ -4,85 +4,141 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bc"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/tip_splitButton"
-        android:layout_width="362dp"
-        android:layout_height="116dp"
+        android:layout_width="181dp"
+        android:layout_height="114dp"
         android:background="@drawable/custom_button"
+        android:drawableTop="@drawable/ic_box_tips"
         android:fontFamily="@font/architects_daughter"
         android:text="Tip and Split"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="181dp"
+        android:layout_height="114dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/architects_daughter"
+        android:drawableTop="@drawable/ic_graph_bar__1_"
+        android:text="Break-Even Point"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="181dp"
+        android:layout_height="114dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/architects_daughter"
+        android:text="Interest"
+        android:drawableTop="@drawable/ic_percentage__2_"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.895" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="198dp"
-        android:layout_height="119dp"
-        android:text="Break-Even Point"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="198dp"
-        android:layout_height="119dp"
-        android:text="Interest"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintVertical_bias="0.619" />
 
     <Button
         android:id="@+id/buttonUC"
-        android:layout_width="405dp"
-        android:layout_height="112dp"
+        android:layout_width="181dp"
+        android:layout_height="114dp"
+        android:background="@drawable/custom_button"
+        android:drawableTop="@drawable/ic_funnel"
+        android:fontFamily="@font/architects_daughter"
         android:text="Unit Conversion"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.392" />
 
     <Button
         android:id="@+id/loanButton"
-        android:layout_width="195dp"
-        android:layout_height="119dp"
+        android:layout_width="181dp"
+        android:layout_height="114dp"
+        android:background="@drawable/custom_button"
+        android:drawableTop="@drawable/ic_loan"
+        android:fontFamily="@font/architects_daughter"
+        android:gravity="center"
         android:text="Loan"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintVertical_bias="0.619" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="195dp"
-        android:layout_height="119dp"
+        android:layout_width="181dp"
+        android:layout_height="114dp"
+        android:background="@drawable/custom_button"
+        android:drawableTop="@drawable/ic_percentage"
+        android:fontFamily="@font/architects_daughter"
         android:onClick="openAPRActivity"
         android:text="APR"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintVertical_bias="0.392" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="202dp"
+        android:layout_height="122dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/budget" />
 
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="189dp"
+        android:layout_height="67dp"
+        android:fontFamily="casual"
+        android:text="FinCalc"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#ffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <!--<TextView
         android:id="@+id/textView"
         android:layout_width="189dp"
         android:layout_height="67dp"
@@ -93,6 +149,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
-
+        app:layout_constraintVertical_bias="0.024" /> -->
 </androidx.constraintlayout.widget.ConstraintLayout>

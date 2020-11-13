@@ -14,7 +14,7 @@
         tools:layout_editor_absoluteY="0dp">
 
         <TextView
-            android:id="@+id/textView33"
+            android:id="@+id/meterAnswer"
             android:layout_width="104dp"
             android:layout_height="40dp"
             android:text="NULL"
@@ -26,7 +26,7 @@
             app:layout_constraintVertical_bias="0.486" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/kmAnswer"
             android:layout_width="104dp"
             android:layout_height="40dp"
             android:text="NULL"
@@ -38,7 +38,7 @@
             app:layout_constraintVertical_bias="0.567" />
 
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/inchAnswer"
             android:layout_width="104dp"
             android:layout_height="40dp"
             android:text="NULL"
@@ -50,7 +50,7 @@
             app:layout_constraintVertical_bias="0.639" />
 
         <TextView
-            android:id="@+id/textView30"
+            android:id="@+id/feetAnswer"
             android:layout_width="104dp"
             android:layout_height="40dp"
             android:text="NULL"
@@ -62,7 +62,7 @@
             app:layout_constraintVertical_bias="0.719" />
 
         <TextView
-            android:id="@+id/textView34"
+            android:id="@+id/mileAnswer"
             android:layout_width="104dp"
             android:layout_height="40dp"
             android:text="NULL"
@@ -74,7 +74,7 @@
             app:layout_constraintVertical_bias="0.803" />
 
         <TextView
-            android:id="@+id/textView35"
+            android:id="@+id/yardAnswer"
             android:layout_width="104dp"
             android:layout_height="40dp"
             android:text="NULL"
@@ -86,7 +86,7 @@
             app:layout_constraintVertical_bias="0.898" />
 
         <TextView
-            android:id="@+id/textView36"
+            android:id="@+id/cmAnswer"
             android:layout_width="104dp"
             android:layout_height="40dp"
             android:text="NULL"
@@ -96,13 +96,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.976" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            tools:layout_editor_absoluteY="238dp" />
 
         <TextView
             android:id="@+id/textView6"
@@ -206,7 +199,7 @@
         app:layout_constraintVertical_bias="0.091" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal5"
+        android:id="@+id/editTextLength"
         android:layout_width="140dp"
         android:layout_height="75dp"
         android:ems="10"
@@ -233,7 +226,7 @@
         app:layout_constraintVertical_bias="0.241" />
 
     <Spinner
-        android:id="@+id/timeSpinner2"
+        android:id="@+id/lengthSpinner"
         android:layout_width="155dp"
         android:layout_height="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -243,18 +236,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.222" />
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteY="238dp" />
 
     <Button
-        android:id="@+id/calculateButton2"
+        android:id="@+id/calculateButtonLength"
         android:layout_width="120dp"
         android:layout_height="58dp"
         android:text="Calculate"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/calculate_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
