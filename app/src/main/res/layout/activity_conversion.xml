@@ -4,80 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/twobc"
     tools:context=".ConversionActivity">
 
     <Button
         android:id="@+id/button_Temp"
         android:layout_width="147dp"
         android:layout_height="149dp"
+        android:background="@drawable/apr_design"
+        android:drawableTop="@drawable/ic__temperature"
         android:text="Temperature"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:fontFamily="@font/architects_daughter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.632" />
 
     <Button
         android:id="@+id/button_time"
         android:layout_width="147dp"
         android:layout_height="149dp"
+        android:background="@drawable/apr_design"
+        android:drawableTop="@drawable/ic_time"
         android:text="Time"
+        android:textColor="#ffff"
+        android:textSize="29dp"
+        android:fontFamily="@font/architects_daughter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.304" />
 
     <Button
         android:id="@+id/button_length"
         android:layout_width="147dp"
         android:layout_height="149dp"
         android:onClick="openLengthActivity"
+        android:background="@drawable/apr_design"
+        android:drawableTop="@drawable/ic_length"
         android:text="Length"
+        android:textColor="#ffff"
+        android:textSize="29dp"
+        android:fontFamily="@font/architects_daughter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.304" />
 
     <Button
         android:id="@+id/button_mass"
         android:layout_width="147dp"
         android:layout_height="149dp"
+        android:drawableTop="@drawable/ic_mass"
         android:text="MASS"
+        android:textColor="#ffff"
+        android:textSize="29dp"
+        android:fontFamily="@font/architects_daughter"
+        android:background="@drawable/apr_design"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.632" />
 
     <Button
         android:id="@+id/button_force"
         android:layout_width="147dp"
         android:layout_height="149dp"
         android:text="FORCE"
+        android:drawableTop="@drawable/ic_force"
+        android:textColor="#ffff"
+        android:textSize="29dp"
+        android:fontFamily="@font/architects_daughter"
+        android:background="@drawable/apr_design"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.876" />
+        app:layout_constraintVertical_bias="0.945" />
 
     <Button
         android:id="@+id/button_pressure"
         android:layout_width="147dp"
         android:layout_height="149dp"
+        android:drawableTop="@drawable/ic_pressure"
         android:text="Pressure"
+        android:textColor="#ffff"
+        android:textSize="25dp"
+        android:fontFamily="@font/architects_daughter"
+        android:background="@drawable/apr_design"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.876" />
+        app:layout_constraintVertical_bias="0.945" />
 
     <TextView
         android:id="@+id/textView3"
@@ -85,10 +116,13 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
         android:text="UNIT CONVERSION"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.022"
+        tools:fontFamily="@font/architects_daughter" />
 </androidx.constraintlayout.widget.ConstraintLayout>
