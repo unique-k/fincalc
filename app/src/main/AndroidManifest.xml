@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".lengthActivity"></activity>
+        <activity android:name=".breakEvenActivity"></activity>
+        <activity android:name=".TipActivity" />
+        <activity android:name=".InterestActivity" />
+        <activity android:name=".lengthActivity" />
         <activity android:name=".APRActivity" />
         <activity android:name=".LoanActivity" />
         <activity android:name=".timeActivity" />

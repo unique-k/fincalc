@@ -45,4 +45,16 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(this, APRActivity.class);
         startActivity(intent);
     }
+    public void openInterestActivity(View View){
+        Intent intent=new Intent(this, InterestActivity.class);
+        startActivity(intent);
+    }
+    public void openTipActivity(View View){
+        Intent intent=new Intent(this, TipActivity.class);
+        startActivity(intent);
+    }
+    public void openBreakEvenActivity(View View){
+        Intent intent=new Intent(this, breakEvenActivity.class);
+        startActivity(intent);
+    }
 }
