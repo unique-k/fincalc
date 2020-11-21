@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/alegreya_sc</item>
+        <item>@font/almendra_bold</item>
         <item>@font/architects_daughter</item>
         <item>@font/bungee_shade</item>
         <item>@font/diplomata_sc</item>

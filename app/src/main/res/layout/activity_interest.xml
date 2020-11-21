@@ -4,6 +4,214 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InterestActivity">
+    tools:context=".InterestActivity"
+    android:background="@drawable/backgroundaa">
 
+    <TextView
+        android:id="@+id/totalAmountOutput"
+        android:layout_width="158dp"
+        android:layout_height="71dp"
+        android:fontFamily="@font/el_messiri"
+        android:textColor="#5D1ECD"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.759" />
+
+    <TextView
+        android:id="@+id/totalInterestOutput"
+        android:layout_width="158dp"
+        android:layout_height="63dp"
+        android:fontFamily="@font/el_messiri"
+        android:textColor="#6122D1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.899" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="158dp"
+        android:layout_height="71dp"
+        android:fontFamily="@font/el_messiri"
+        android:text="Total Amount:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="158dp"
+        android:layout_height="63dp"
+        android:fontFamily="@font/el_messiri"
+        android:text="Total Interest:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.899" />
+
+    <Spinner
+        android:id="@+id/dropdownInterest"
+        android:layout_width="141dp"
+        android:layout_height="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465" />
+
+    <Button
+        android:id="@+id/clear_buttonIC"
+        android:layout_width="153dp"
+        android:layout_height="79dp"
+        android:background="@drawable/clear_button"
+        android:fontFamily="@font/el_messiri"
+        android:text="CLEAR"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.605" />
+
+    <Button
+        android:id="@+id/calculateButtonIC"
+        android:layout_width="153dp"
+        android:layout_height="79dp"
+        android:background="@drawable/calculate_button"
+        android:fontFamily="@font/el_messiri"
+        android:text="Calculate"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.605" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="164dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/el_messiri"
+        android:text="Rate %"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.364" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="164dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/el_messiri"
+        android:text="Type"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468" />
+
+    <EditText
+        android:id="@+id/rateInput"
+        android:layout_width="164dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.366" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="164dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/el_messiri"
+        android:text="Time(year)"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.274" />
+
+    <EditText
+        android:id="@+id/timeInput"
+        android:layout_width="164dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.276" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="164dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/el_messiri"
+        android:text="Principle"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <EditText
+        android:id="@+id/principleInput"
+        android:layout_width="164dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="279dp"
+        android:layout_height="56dp"
+        android:fontFamily="@font/diplomata_sc"
+        android:text="Interest Calculator"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 </androidx.constraintlayout.widget.ConstraintLayout>

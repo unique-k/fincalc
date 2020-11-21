@@ -44,12 +44,12 @@ public class breakEvenActivity extends AppCompatActivity {
                 revenue=Float.parseFloat(revenueVar.getText().toString());
                 variableCost=Float.parseFloat(variableVar.getText().toString());
 
-                breakEvenPoint= (int) (fixedCost/(revenue-variableCost));
-                if(breakEvenPoint<0)
+                breakEvenPoint= (int)Math.ceil(fixedCost/(revenue-variableCost));
+                if(revenue<variableCost)
                 {
                     revenueVar.setError("should be higher than variable cost");
                     AlertDialog.Builder builder= new AlertDialog.Builder(breakEvenActivity.this);
-                    builder.setMessage("Cost higher than Selling Price")
+                    builder.setMessage("Invalid Revenue")
                             .setNegativeButton("Cancel",null);
 
                     AlertDialog alert =builder.create();
