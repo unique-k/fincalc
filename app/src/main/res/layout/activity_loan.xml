@@ -4,51 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoanActivity">
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="168dp"
-        android:layout_height="44dp"
-        android:text="0"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.855"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838" />
+    tools:context=".LoanActivity"
+    android:background="@drawable/backgroundaa">
 
     <TextView
         android:id="@+id/amountView6"
         android:layout_width="157dp"
         android:layout_height="43dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Total Principal"
+        android:fontFamily="@font/el_messiri"
+        android:text="Total Interest"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838" />
+        app:layout_constraintVertical_bias="0.886" />
 
     <TextView
         android:id="@+id/amountView5"
-        android:layout_width="157dp"
-        android:layout_height="43dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Total Principal"
-        android:textSize="24sp"
+        android:layout_width="149dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/el_messiri"
+        android:text="Payment/month"
+        android:textSize="21sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.738" />
+        app:layout_constraintVertical_bias="0.789" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal4"
+        android:id="@+id/rpy"
         android:layout_width="183dp"
         android:layout_height="41dp"
         android:ems="10"
@@ -61,7 +49,33 @@
         app:layout_constraintVertical_bias="0.442" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal3"
+        android:id="@+id/total_principle"
+        android:layout_width="188dp"
+        android:layout_height="67dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.76" />
+
+    <EditText
+        android:id="@+id/total_rate"
+        android:layout_width="183dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.884" />
+
+    <EditText
+        android:id="@+id/loan_term"
         android:layout_width="183dp"
         android:layout_height="41dp"
         android:ems="10"
@@ -75,21 +89,25 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="132dp"
-        android:layout_height="58dp"
-        android:text="Clear"
+        android:layout_width="153dp"
+        android:layout_height="79dp"
+        android:background="@drawable/clear_button"
+        android:fontFamily="@font/el_messiri"
+        android:text="CLEAR"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintHorizontal_bias="0.844"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
+        app:layout_constraintVertical_bias="0.605" />
 
     <TextView
         android:id="@+id/amountView2"
         android:layout_width="142dp"
         android:layout_height="52dp"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/el_messiri"
         android:text="Loan Term"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,8 +121,8 @@
         android:id="@+id/amountView3"
         android:layout_width="157dp"
         android:layout_height="43dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Rate(per year)"
+        android:fontFamily="@font/el_messiri"
+        android:text="Rate/year"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,8 +149,8 @@
         android:id="@+id/amountView"
         android:layout_width="142dp"
         android:layout_height="52dp"
-        android:fontFamily="sans-serif-black"
-        android:text="gede"
+        android:fontFamily="@font/el_messiri"
+        android:text="Amount"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,19 +160,23 @@
         app:layout_constraintVertical_bias="0.221" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="181dp"
-        android:layout_height="86dp"
+        android:id="@+id/calculate_loan"
+        android:layout_width="153dp"
+        android:layout_height="79dp"
+        android:background="@drawable/calculate_button"
+        android:fontFamily="@font/el_messiri"
         android:text="Calculate"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintHorizontal_bias="0.124"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.57" />
+        app:layout_constraintVertical_bias="0.605"  />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal2"
+        android:id="@+id/loan_amt"
         android:layout_width="183dp"
         android:layout_height="41dp"
         android:ems="10"
@@ -166,16 +188,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.233" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="168dp"
-        android:layout_height="44dp"
-        android:text="0"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.855"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.739" />
 </androidx.constraintlayout.widget.ConstraintLayout>
