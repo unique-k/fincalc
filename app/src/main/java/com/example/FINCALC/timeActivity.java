@@ -40,37 +40,38 @@ public class timeActivity extends AppCompatActivity {
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                float inputNum=Float.parseFloat(input.getText().toString()); // converting input into a float
-                float minutes=0,hours=0,days=0,years=0,seconds=0; // initializing output values to be 0
-
                 //==========Output 0 if pressed calculate without any input=======================//
-                if(input.getText().toString().trim().length() == 0){
-                    input.setText("0");
+                if (input.getText().toString().equals("")) {
+                    input.setError("Enter value");
                 }
-                //=================Converting any given unit of time in seconds===================//
-                else if(spin.getSelectedItem().toString()=="seconds")
-                    seconds=inputNum;
-                else if(spin.getSelectedItem().toString()=="minutes")
-                    seconds =inputNum*60;
-                else if(spin.getSelectedItem().toString()=="hours")
-                    seconds =inputNum*3600;
-                else if(spin.getSelectedItem().toString()=="days")
-                    seconds =inputNum*24*3600;
-                else if(spin.getSelectedItem().toString()=="year")
-                    seconds =inputNum*24*3600*365;
-                //============Converting seconds to other units===================================//
-                hours= seconds/3600;
-                days= hours/24;
-                years=days/365;
-                minutes =seconds/60;
-                //=================Output the results=============================================//
-                minute.setText(String.valueOf(minutes));
-                second.setText(String.valueOf(seconds));
-                hour.setText(String.valueOf(hours));
-                day.setText(String.valueOf(days));
-                year.setText(String.valueOf(years));
-                //===============================END==============================================//
+                else
+                {
+                    float inputNum = Float.parseFloat(input.getText().toString()); // converting input into a float
+                    float minutes = 0, hours = 0, days = 0, years = 0, seconds = 0; // initializing output values to be 0
+                    //=================Converting any given unit of time in seconds===================//
+                    if (spin.getSelectedItem().toString() == "seconds")
+                        seconds = inputNum;
+                    else if (spin.getSelectedItem().toString() == "minutes")
+                        seconds = inputNum * 60;
+                    else if (spin.getSelectedItem().toString() == "hours")
+                        seconds = inputNum * 3600;
+                    else if (spin.getSelectedItem().toString() == "days")
+                        seconds = inputNum * 24 * 3600;
+                    else if (spin.getSelectedItem().toString() == "year")
+                        seconds = inputNum * 24 * 3600 * 365;
+                    //============Converting seconds to other units===================================//
+                    hours = seconds / 3600;
+                    days = hours / 24;
+                    years = days / 365;
+                    minutes = seconds / 60;
+                    //=================Output the results=============================================//
+                    minute.setText(String.valueOf(minutes));
+                    second.setText(String.valueOf(seconds));
+                    hour.setText(String.valueOf(hours));
+                    day.setText(String.valueOf(days));
+                    year.setText(String.valueOf(years));
+                    //===============================END==============================================//
+                }
             }
         });
 

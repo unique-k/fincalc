@@ -37,52 +37,56 @@ public class lengthActivity extends AppCompatActivity {
         yard=findViewById(R.id.yardAnswer);
         centimeter=findViewById(R.id.cmAnswer);
 
+
         //=================After pressing calculate button========================================//
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                float inputNum=Float.parseFloat(input.getText().toString()); // converting input into a float
-                float meters=0,kilometers=0,inches=0,feets=0,miles=0,yards=0,centimeters=0;
-
                 //==========Output 0 if pressed calculate without any input=======================//
-                if(input.getText().toString().trim().length() == 0){
-                    input.setText("0");
+                if (input.getText().toString().equals("")) {
+                    input.setError("Enter value");
                 }
+                else
+                {
+                    float inputNum = Float.parseFloat(input.getText().toString()); // converting input into a float
+                    float meters = 0, kilometers = 0, inches = 0, feets = 0, miles = 0, yards = 0, centimeters = 0;
 
-                //=================Converting any given unit of time in meters===================//
-                if(spin.getSelectedItem().toString()=="meters")
-                    meters=inputNum;
-                else if(spin.getSelectedItem().toString()=="kilometers")
-                    meters=inputNum*1000;
-                else if(spin.getSelectedItem().toString()=="inches")
-                    meters= (float) (inputNum*0.0254);
-                else if(spin.getSelectedItem().toString()=="feet")
-                    meters= (float) (inputNum*0.3048);
-                else if(spin.getSelectedItem().toString()=="miles")
-                    meters= (float) (inputNum*1609.344);
-                else if(spin.getSelectedItem().toString()=="yards")
-                    meters= (float) (inputNum*0.9144);
-                else if(spin.getSelectedItem().toString()=="centimeters")
-                    meters= (float) (inputNum*0.01);
-                //============Converting meters to other units===================================//
-                kilometers= meters/1000;
-                inches=(float) (meters/0.0254);
-                feets=(float) (meters/0.3048);
-                miles=(float) (meters/1609.344);
-                yards=(float) (meters/0.9144);
-                centimeters=(float) (meters*100);
-                //=================Output the results=============================================//
-                meter.setText(String.valueOf(meters));
-                kilometer.setText(String.valueOf(kilometers));
-                inch.setText(String.valueOf(inches));
-                feet.setText(String.valueOf(feets));
-                mile.setText(String.valueOf(miles));
-                yard.setText(String.valueOf(yards));
-                centimeter.setText(String.valueOf(centimeters));
-                //===============================END==============================================//
 
-                //yard.setText("a");
+                    //=================Converting any given unit of time in meters===================//
+                    if (spin.getSelectedItem().toString() == "meters")
+                        meters = inputNum;
+                    else if (spin.getSelectedItem().toString() == "kilometers")
+                        meters = inputNum * 1000;
+                    else if (spin.getSelectedItem().toString() == "inches")
+                        meters = (float) (inputNum * 0.0254);
+                    else if (spin.getSelectedItem().toString() == "feet")
+                        meters = (float) (inputNum * 0.3048);
+                    else if (spin.getSelectedItem().toString() == "miles")
+                        meters = (float) (inputNum * 1609.344);
+                    else if (spin.getSelectedItem().toString() == "yards")
+                        meters = (float) (inputNum * 0.9144);
+                    else if (spin.getSelectedItem().toString() == "centimeters")
+                        meters = (float) (inputNum * 0.01);
+                    //============Converting meters to other units===================================//
+                    kilometers = meters / 1000;
+                    inches = (float) (meters / 0.0254);
+                    feets = (float) (meters / 0.3048);
+                    miles = (float) (meters / 1609.344);
+                    yards = (float) (meters / 0.9144);
+                    centimeters = (float) (meters * 100);
+                    //=================Output the results=============================================//
+                    meter.setText(String.valueOf(meters));
+                    kilometer.setText(String.valueOf(kilometers));
+                    inch.setText(String.valueOf(inches));
+                    feet.setText(String.valueOf(feets));
+                    mile.setText(String.valueOf(miles));
+                    yard.setText(String.valueOf(yards));
+                    centimeter.setText(String.valueOf(centimeters));
+                    //===============================END==============================================//
 
+                    //yard.setText("a");
+
+                }
             }
         });
     }
