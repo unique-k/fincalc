@@ -88,7 +88,7 @@
         app:layout_constraintVertical_bias="0.336" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/clc"
         android:layout_width="153dp"
         android:layout_height="79dp"
         android:background="@drawable/clear_button"
