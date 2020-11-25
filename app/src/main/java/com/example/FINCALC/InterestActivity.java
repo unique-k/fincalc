@@ -52,7 +52,7 @@ public class InterestActivity extends AppCompatActivity {
             public void onClick(View v) {
                 float principle,time,rate,totalAmount = 0,totalInterest=0;
 
-        //=========================Converting user input to float==============================//
+               //=========================Converting user input to float==============================//
                 principle=Float.parseFloat(principleVar.getText().toString());
                 time=Float.parseFloat(timeVar.getText().toString());
                 rate=Float.parseFloat(rateVar.getText().toString());
@@ -72,7 +72,7 @@ public class InterestActivity extends AppCompatActivity {
                     totalAmount= (float) (principle*(Math.pow((1+(rate/100)),time)));
                     totalInterest=totalAmount-principle;
                 }
-        //=========================Displaying Results==============================//
+               //=========================Displaying Results==============================//
                 totalAmountOut.setText(String.valueOf(totalAmount));
                 totalInterestOut.setText(String.valueOf(totalInterest));
             }

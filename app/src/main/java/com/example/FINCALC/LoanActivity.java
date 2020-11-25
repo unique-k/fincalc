@@ -28,7 +28,7 @@ public class LoanActivity extends AppCompatActivity {
 
         // find view by id
         loan_amount = findViewById(R.id.loan_amt); // saves the value of loan amt in loan_amount.
-        loan_time = findViewById(R.id.loan_term); // saves the value of loaan term in loan_time
+        loan_time = findViewById(R.id.loan_term); // saves the value of loan term in loan_time
         loan_rate = findViewById(R.id.rpy); // saves the value of loan rate in loan_rate.
         calc = findViewById(R.id.calculate_loan);
         result_principle = findViewById(R.id.total_principle);
