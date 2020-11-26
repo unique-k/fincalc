@@ -79,7 +79,7 @@ public class APRActivity extends AppCompatActivity {
                         float rate_per_month,num_of_months,temp,power_variable,temp_payment,payment,temp_interest_paid,interest_paid;
 
 
-                        monthlyPayment= (float) ((loan*((rate/100)/12))/(1-Math.pow((1+(rate/100*12)),-12*term)));
+                        //monthlyPayment= (float) ((loan*((rate/100)/12))/(1-Math.pow((1+(rate/100*12)),-12*term)));
 
                         /*rate_per_month = rate / 1200;
                         num_of_months = term * 12;
@@ -89,7 +89,10 @@ public class APRActivity extends AppCompatActivity {
                         payment = (float) (Math.round(temp_payment * 100.00) / 100.00);
                         temp_interest_paid = (num_of_months * payment) - ;
                         interest_paid = (float) (Math.round(temp_interest_paid * 100.00) / 100.00);*/
-                        apr=((((loan*rate*term)/100)+charges)/(loan*term))*100;
+                        apr=(((((loan+charges)*rate*term)/100)+charges)/(loan*term))*100;
+                        //apr=
+
+                        //totalPayment= (float) ((loan+charges)*rate*(Math.pow((1+rate),(term*12)))/((Math.pow(1+(rate/100),term*12))-1));
 
                     } catch (NumberFormatException e) {
                         e.printStackTrace();
