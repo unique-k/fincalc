@@ -44,26 +44,35 @@ public class breakEvenActivity extends AppCompatActivity {
                 float fixedCost,revenue, variableCost;
                 int breakEvenPoint=0;
 
-                fixedCost=Float.parseFloat(fixedVar.getText().toString());
-                revenue=Float.parseFloat(revenueVar.getText().toString());
-                variableCost=Float.parseFloat(variableVar.getText().toString());
-
-                breakEvenPoint= (int)Math.ceil(fixedCost/(revenue-variableCost));
-                if(revenue<variableCost)
-                {
-                    revenueVar.setError("should be higher than variable cost");
-                    AlertDialog.Builder builder= new AlertDialog.Builder(breakEvenActivity.this);
-                    builder.setMessage("Invalid Revenue")
-                            .setNegativeButton("Cancel",null);
-
-                    AlertDialog alert =builder.create();
-                    alert.show();
-                }
+                if(fixedVar.getText().toString().equals(""))
+                    fixedVar.setError("Enter Value");
+                else if(revenueVar.getText().toString().equals(""))
+                    revenueVar.setError("Enter Value");
+                else if(variableVar.getText().toString().equals(""))
+                    variableVar.setError("Enter Value");
                 else
                 {
-                    brOutputVar.setText(String.valueOf(breakEvenPoint));
-                }
 
+                    fixedCost=Float.parseFloat(fixedVar.getText().toString());
+                    revenue=Float.parseFloat(revenueVar.getText().toString());
+                    variableCost=Float.parseFloat(variableVar.getText().toString());
+
+                    breakEvenPoint= (int)Math.ceil(fixedCost/(revenue-variableCost));
+                    if(revenue<variableCost)
+                    {
+                        revenueVar.setError("should be higher than variable cost");
+                        AlertDialog.Builder builder= new AlertDialog.Builder(breakEvenActivity.this);
+                        builder.setMessage("Invalid Revenue")
+                                .setNegativeButton("Cancel",null);
+
+                        AlertDialog alert =builder.create();
+                        alert.show();
+                    }
+                    else
+                    {
+                        brOutputVar.setText(String.valueOf(breakEvenPoint));
+                    }
+                }
             }
         });
     }

@@ -56,29 +56,39 @@ public class InterestActivity extends AppCompatActivity {
                 imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
                 float principle,time,rate,totalAmount = 0,totalInterest=0;
 
-               //=========================Converting user input to float==============================//
-                principle=Float.parseFloat(principleVar.getText().toString());
-                time=Float.parseFloat(timeVar.getText().toString());
-                rate=Float.parseFloat(rateVar.getText().toString());
+                if(principleVar.getText().toString().equals(""))
+                    principleVar.setError("Enter Value");
+                else if(timeVar.getText().toString().equals(""))
+                    timeVar.setError("Enter Value");
+                else if(rateVar.getText().toString().equals(""))
+                    rateVar.setError("Enter Value");
+                else
+                {
 
-                if(spin.getSelectedItem().toString()=="simple interest")
-                {
-                    totalInterest=(principle*time*rate)/100;
-                    totalAmount=totalInterest+principle;
+                    //=========================Converting user input to float==============================//
+                    principle=Float.parseFloat(principleVar.getText().toString());
+                    time=Float.parseFloat(timeVar.getText().toString());
+                    rate=Float.parseFloat(rateVar.getText().toString());
+
+                    if(spin.getSelectedItem().toString()=="simple interest")
+                    {
+                        totalInterest=(principle*time*rate)/100;
+                        totalAmount=totalInterest+principle;
+                    }
+                    else if(spin.getSelectedItem().toString()=="compounded semi-annually")
+                    {
+                        totalAmount= (float) (principle*(Math.pow((1+(rate/200)),(2*time))));
+                        totalInterest=totalAmount-principle;
+                    }
+                    else if(spin.getSelectedItem().toString()=="compounded annually")
+                    {
+                        totalAmount= (float) (principle*(Math.pow((1+(rate/100)),time)));
+                        totalInterest=totalAmount-principle;
+                    }
+                   //=========================Displaying Results==============================//
+                    totalAmountOut.setText(String.valueOf(totalAmount));
+                    totalInterestOut.setText(String.valueOf(totalInterest));
                 }
-                else if(spin.getSelectedItem().toString()=="compounded semi-annually")
-                {
-                    totalAmount= (float) (principle*(Math.pow((1+(rate/200)),(2*time))));
-                    totalInterest=totalAmount-principle;
-                }
-                else if(spin.getSelectedItem().toString()=="compounded annually")
-                {
-                    totalAmount= (float) (principle*(Math.pow((1+(rate/100)),time)));
-                    totalInterest=totalAmount-principle;
-                }
-               //=========================Displaying Results==============================//
-                totalAmountOut.setText(String.valueOf(totalAmount));
-                totalInterestOut.setText(String.valueOf(totalInterest));
             }
         });
     }

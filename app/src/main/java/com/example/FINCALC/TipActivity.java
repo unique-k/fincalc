@@ -48,28 +48,36 @@ public class TipActivity extends AppCompatActivity {
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
 
-                float inputBillVar=Float.parseFloat(billA.getText().toString());
-                float tipVar=Float.parseFloat(tip.getText().toString());
-                if(tipVar<=0)
+                if (billA.getText().toString().equals(""))
+                    billA.setError("Enter Value");
+                else if (tip.getText().toString().equals(""))
+                    tip.setError("Enter Value");
+                else if (people.getText().toString().equals(""))
+                    people.setError("Enter Value");
+                else
                 {
-                    tipVar=1;
-                    splitOut.setText("1");
-                }
-                float numVar=Float.parseFloat(people.getText().toString());
+                    float inputBillVar = Float.parseFloat(billA.getText().toString());
+                    float tipVar = Float.parseFloat(tip.getText().toString());
+                    if (tipVar <= 0) {
+                        tipVar = 1;
+                        splitOut.setText("1");
+                    }
+                    float numVar = Float.parseFloat(people.getText().toString());
 
-                float totalAmount=0,tipsAmount=0,splitAmount=0;
+                    float totalAmount = 0, tipsAmount = 0, splitAmount = 0;
 
-                totalAmount=inputBillVar+((tipVar/100)*inputBillVar);
-                tipsAmount=(tipVar/100)*inputBillVar;
-                splitAmount=totalAmount/numVar;
+                    totalAmount = inputBillVar + ((tipVar / 100) * inputBillVar);
+                    tipsAmount = (tipVar / 100) * inputBillVar;
+                    splitAmount = totalAmount / numVar;
 
-                //==============Output=====================//
-                totalOut.setText(String.valueOf(totalAmount));
-                tipsOut.setText(String.valueOf(tipsAmount));
-                splitOut.setText(String.valueOf(splitAmount));
+                    //==============Output=====================//
+                    totalOut.setText(String.valueOf(totalAmount));
+                    tipsOut.setText(String.valueOf(tipsAmount));
+                    splitOut.setText(String.valueOf(splitAmount));
+            }
 
             }
         });
