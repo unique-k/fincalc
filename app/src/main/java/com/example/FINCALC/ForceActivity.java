@@ -42,8 +42,6 @@ public class ForceActivity extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
                 input.setText("");
                 NewtonsVar.setText("");
                 poundVar.setText("");

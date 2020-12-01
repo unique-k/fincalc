@@ -2,8 +2,10 @@ package com.example.FINCALC;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -46,6 +48,9 @@ public class TipActivity extends AppCompatActivity {
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
+
                 float inputBillVar=Float.parseFloat(billA.getText().toString());
                 float tipVar=Float.parseFloat(tip.getText().toString());
                 if(tipVar<=0)

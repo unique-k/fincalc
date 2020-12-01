@@ -2,8 +2,10 @@ package com.example.FINCALC;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +14,7 @@ import android.widget.TextView;
 
 public class timeActivity extends AppCompatActivity {
     private EditText input;
-    private Button calculate;
+    private Button calculate,clear;
     private Spinner spin;
     private TextView second,minute,hour,day,year;
     @Override
@@ -35,17 +37,33 @@ public class timeActivity extends AppCompatActivity {
         hour=findViewById(R.id.hoursAnswers);
         day=findViewById(R.id.daysAnswer);
         year=findViewById(R.id.yearAnswer);
+        clear=findViewById(R.id.clearButtonTime);
+
+        //===========================On clear button========================================//
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input.setText("");
+                minute.setText("");
+                second.setText("");
+                hour.setText("");
+                day.setText("");
+                year.setText("");
+            }
+        });
 
         //=================After pressing calculate button========================================//
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //==========Output 0 if pressed calculate without any input=======================//
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
+
                 if (input.getText().toString().equals("")) {
                     input.setError("Enter value");
                 }
-                else
-                {
+                else {
+
                     float inputNum = Float.parseFloat(input.getText().toString()); // converting input into a float
                     float minutes = 0, hours = 0, days = 0, years = 0, seconds = 0; // initializing output values to be 0
                     //=================Converting any given unit of time in seconds===================//
@@ -72,9 +90,8 @@ public class timeActivity extends AppCompatActivity {
                     year.setText(String.valueOf(years));
                     //===============================END==============================================//
                 }
+
             }
         });
-
-
     }
 }

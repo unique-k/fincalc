@@ -2,8 +2,10 @@ package com.example.FINCALC;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +14,7 @@ import android.widget.TextView;
 
 public class lengthActivity extends AppCompatActivity {
     private EditText input;
-    private Button calculate;
+    private Button calculate,clear;
     private Spinner spin;
     private TextView meter, kilometer, inch, feet, mile, yard,centimeter;
     @Override
@@ -36,12 +38,31 @@ public class lengthActivity extends AppCompatActivity {
         mile=findViewById(R.id.mileAnswer);
         yard=findViewById(R.id.yardAnswer);
         centimeter=findViewById(R.id.cmAnswer);
+        clear=findViewById(R.id.clearButtonLength);
+
+        //===========================On clear button========================================//
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input.setText("");
+                meter.setText("");
+                kilometer.setText("");
+                inch.setText("");
+                feet.setText("");
+                mile.setText("");
+                yard.setText("");
+                centimeter.setText("");
+                clear.setText("");
+            }
+        });
 
 
         //=================After pressing calculate button========================================//
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
                 //==========Output 0 if pressed calculate without any input=======================//
                 if (input.getText().toString().equals("")) {
                     input.setError("Enter value");

@@ -112,6 +112,7 @@
             android:layout_width="385dp"
             android:layout_height="65dp"
             android:fontFamily="@font/diplomata_sc"
+            android:gravity="center"
             android:text="Temperature Conversion"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"

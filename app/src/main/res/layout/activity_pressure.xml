@@ -267,6 +267,7 @@
         android:layout_height="65dp"
         android:fontFamily="@font/diplomata_sc"
         android:text="Pressure Conversion"
+        android:gravity="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

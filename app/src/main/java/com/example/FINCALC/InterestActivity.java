@@ -2,8 +2,10 @@ package com.example.FINCALC;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -50,6 +52,8 @@ public class InterestActivity extends AppCompatActivity {
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
                 float principle,time,rate,totalAmount = 0,totalInterest=0;
 
                //=========================Converting user input to float==============================//

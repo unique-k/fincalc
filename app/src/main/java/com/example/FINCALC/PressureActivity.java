@@ -42,8 +42,6 @@ public class PressureActivity extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
                 input.setText("");
                 atmVar.setText("");
                 barVar.setText("");
