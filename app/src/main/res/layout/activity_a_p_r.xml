@@ -232,6 +232,7 @@
         android:layout_width="349dp"
         android:layout_height="33dp"
         android:fontFamily="@font/diplomata_sc"
+        android:gravity="center"
         android:text="APR CALCULATOR"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

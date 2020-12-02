@@ -4,36 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoanActivity"
-    android:background="@drawable/backgroundaa">
+    tools:context=".LoanActivity">
 
     <TextView
         android:id="@+id/amountView6"
-        android:layout_width="157dp"
-        android:layout_height="43dp"
+        android:layout_width="188dp"
+        android:layout_height="53dp"
         android:fontFamily="@font/el_messiri"
+        android:gravity="center"
         android:text="Total Interest"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.886" />
+        app:layout_constraintVertical_bias="0.867" />
 
     <TextView
         android:id="@+id/amountView5"
-        android:layout_width="149dp"
-        android:layout_height="80dp"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
         android:fontFamily="@font/el_messiri"
         android:text="Payment/month"
-        android:textSize="21sp"
+        android:textSize="27sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.789" />
+        app:layout_constraintVertical_bias="0.749" />
 
     <EditText
         android:id="@+id/rpy"
@@ -47,32 +47,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.442" />
-
-    <EditText
-        android:id="@+id/total_principle"
-        android:layout_width="188dp"
-        android:layout_height="67dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.928"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76" />
-
-    <EditText
-        android:id="@+id/total_rate"
-        android:layout_width="183dp"
-        android:layout_height="41dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.929"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884" />
 
     <EditText
         android:id="@+id/loan_term"
@@ -187,5 +161,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.233" />
+
+    <TextView
+        android:id="@+id/total_rate"
+        android:layout_width="153dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/el_messiri"
+        android:textColor="#673AB7"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.867" />
+
+    <TextView
+        android:id="@+id/total_principle"
+        android:layout_width="153dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/el_messiri"
+        android:textColor="#673AB7"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
