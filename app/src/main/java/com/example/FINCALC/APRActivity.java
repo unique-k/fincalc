@@ -49,25 +49,19 @@ public class APRActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
 
                 float loan,term,rate,charges,apr=0,monthlyPayment=0,totalPayment=0;
 
-                if (loanVar.getText().toString().equals("")) {
+                if (loanVar.getText().toString().equals(""))
                     loanVar.setError("Enter value");
-                }
-                else if (termVar.getText().toString().equals("")) {
+                else if (termVar.getText().toString().equals(""))
                     termVar.setError("Enter value");
-                }
-                else if (rateVar.getText().toString().equals("")) {
+                else if (rateVar.getText().toString().equals(""))
                     rateVar.setError("Enter value");
-                }
-                else if (chargesVar.getText().toString().equals("")) {
+                else if (chargesVar.getText().toString().equals(""))
                     chargesVar.setError("Enter value");
-                }
-
                 else {
 
                     try {
@@ -75,29 +69,12 @@ public class APRActivity extends AppCompatActivity {
                         term = Float.parseFloat(termVar.getText().toString());
                         rate = Float.parseFloat(rateVar.getText().toString());
                         charges = Float.parseFloat(chargesVar.getText().toString());
-
-                        float rate_per_month,num_of_months,temp,power_variable,temp_payment,payment,temp_interest_paid,interest_paid;
-
-
-                        //monthlyPayment= (float) ((loan*((rate/100)/12))/(1-Math.pow((1+(rate/100*12)),-12*term)));
-
-                        /*rate_per_month = rate / 1200;
-                        num_of_months = term * 12;
-                        temp = rate_per_month + 1;
-                        power_variable = (float) Math.pow(temp, num_of_months);
-                        temp_payment = (loan * rate_per_month * power_variable) / (power_variable - 1);
-                        payment = (float) (Math.round(temp_payment * 100.00) / 100.00);
-                        temp_interest_paid = (num_of_months * payment) - ;
-                        interest_paid = (float) (Math.round(temp_interest_paid * 100.00) / 100.00);*/
                         apr=(((((loan+charges)*rate*term)/100)+charges)/(loan*term))*100;
-                        //apr=
-
-                        //totalPayment= (float) ((loan+charges)*rate*(Math.pow((1+rate),(term*12)))/((Math.pow(1+(rate/100),term*12))-1));
-
+                        monthlyPayment= (float) ((loan*(apr/1200))/(1-Math.pow(1+(apr/1200),-12*term)));
+                        totalPayment=monthlyPayment*12*term;
                     } catch (NumberFormatException e) {
                         e.printStackTrace();
                     }
-
                     aprOut.setText(String.valueOf(apr));
                     monthlyPaymentOut.setText(String.valueOf(monthlyPayment));
                     totalPaymentOut.setText(String.valueOf(totalPayment));

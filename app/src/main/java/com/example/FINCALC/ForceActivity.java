@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -29,10 +30,10 @@ public class ForceActivity extends AppCompatActivity {
         spin.setAdapter(adapter);
 
         //==========================findViewById==================================================//
-        input=findViewById(R.id.pressureInput);
+        input=findViewById(R.id.forceInput);
         NewtonsVar=findViewById(R.id.NewtonAnswer);
         poundVar=findViewById(R.id.poundAnswer);
-        dyneVar=findViewById(R.id.ftAnswer);
+        dyneVar=findViewById(R.id.dyneAnswer);
         kipVar=findViewById(R.id.kipAnswer);
 
         clear=findViewById(R.id.clearForce);
@@ -57,15 +58,14 @@ public class ForceActivity extends AppCompatActivity {
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
 
-                if (input.getText().toString().equals("")) {
+                if (input.getText().toString().equals(""))
                     input.setError("Enter value");
-                }
                 else
                 {
                     float inputValue=Float.parseFloat(input.getText().toString());
                     float Newtons=0,dyne=0,kip=0,poundForce=0;
                     //=================Converting any given unit of force into Newtons===================//
-                    if (spin.getSelectedItem().toString() == "newtons")
+                    if (spin.getSelectedItem().toString() == "Newtons")
                         Newtons=inputValue;
                     else if(spin.getSelectedItem().toString()=="dyne")
                         Newtons= (float) (inputValue/100000);
