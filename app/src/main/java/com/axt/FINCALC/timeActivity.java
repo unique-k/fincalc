@@ -64,8 +64,8 @@ public class timeActivity extends AppCompatActivity {
                 }
                 else {
 
-                    float inputNum = Float.parseFloat(input.getText().toString()); // converting input into a float
-                    float minutes = 0, hours = 0, days = 0, years = 0, seconds = 0; // initializing output values to be 0
+                    double inputNum = Double.parseDouble(input.getText().toString()); // converting input into a double
+                    double minutes = 0, hours = 0, days = 0, years = 0, seconds = 0; // initializing output values to be 0
                     //=================Converting any given unit of time in seconds===================//
                     if (spin.getSelectedItem().toString() == "seconds")
                         seconds = inputNum;

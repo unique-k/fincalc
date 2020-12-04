@@ -62,22 +62,22 @@ public class ForceActivity extends AppCompatActivity {
                     input.setError("Enter value");
                 else
                 {
-                    float inputValue=Float.parseFloat(input.getText().toString());
-                    float Newtons=0,dyne=0,kip=0,poundForce=0;
+                    double inputValue=Double.parseDouble(input.getText().toString());
+                    double Newtons=0,dyne=0,kip=0,poundForce=0;
                     //=================Converting any given unit of force into Newtons===================//
                     if (spin.getSelectedItem().toString() == "Newtons")
                         Newtons=inputValue;
                     else if(spin.getSelectedItem().toString()=="dyne")
-                        Newtons= (float) (inputValue/100000);
+                        Newtons= (double) (inputValue/100000);
                     else if(spin.getSelectedItem().toString()=="pounds-force")
-                        Newtons= (float) (inputValue*4.448);
+                        Newtons= (double) (inputValue*4.448);
                     else if(spin.getSelectedItem().toString()=="kip")
-                        Newtons= (float) (inputValue*4448.22);
+                        Newtons= (double) (inputValue*4448.22);
 
                     //============Converting atm to other units===================================//
-                    kip= (float) (Newtons/4448.22);
-                    dyne= (float) (Newtons*100000);
-                    poundForce= (float) (Newtons/4.448);
+                    kip= (double) (Newtons/4448.22);
+                    dyne= (double) (Newtons*100000);
+                    poundForce= (double) (Newtons/4.448);
 
                     //=================Output the results=============================================//
                     kipVar.setText(String.valueOf(kip));

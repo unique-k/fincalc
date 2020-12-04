@@ -53,9 +53,9 @@ public class breakEvenActivity extends AppCompatActivity {
                 else
                 {
 
-                    fixedCost=Float.parseFloat(fixedVar.getText().toString());
-                    revenue=Float.parseFloat(revenueVar.getText().toString());
-                    variableCost=Float.parseFloat(variableVar.getText().toString());
+                    fixedCost=Double.parseDouble(fixedVar.getText().toString());
+                    revenue=Double.parseDouble(revenueVar.getText().toString());
+                    variableCost=Double.parseDouble(variableVar.getText().toString());
 
                     breakEvenPoint= (int)Math.ceil(fixedCost/(revenue-variableCost));
                     if(revenue<variableCost)

@@ -65,10 +65,10 @@ public class APRActivity extends AppCompatActivity {
                 else {
 
                     try {
-                        loan = Float.parseFloat(loanVar.getText().toString());
-                        term = Float.parseFloat(termVar.getText().toString());
-                        rate = Float.parseFloat(rateVar.getText().toString());
-                        charges = Float.parseFloat(chargesVar.getText().toString());
+                        loan = Double.parseDouble(loanVar.getText().toString());
+                        term = Double.parseDouble(termVar.getText().toString());
+                        rate = Double.parseDouble(rateVar.getText().toString());
+                        charges = Double.parseDouble(chargesVar.getText().toString());
                         apr=(((((loan+charges)*rate*term)/100)+charges)/(loan*term))*100;
                         monthlyPayment= (double) ((loan*(apr/1200))/(1-Math.pow(1+(apr/1200),-12*term)));
                         totalPayment=monthlyPayment*12*term;

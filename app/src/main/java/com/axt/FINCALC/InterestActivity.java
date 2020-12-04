@@ -66,12 +66,14 @@ public class InterestActivity extends AppCompatActivity {
                 {
                     if(Double.parseDouble(timeVar.getText().toString())>100)
                         timeVar.setError("time can't be more than 100 years");
+                    if(Double.parseDouble(rateVar.getText().toString())>100)
+                        rateVar.setError("rate can't exceed 100");
                     else
                     {
-                        //=========================Converting user input to float==============================//
-                        principle=Float.parseFloat(principleVar.getText().toString());
-                        time=Float.parseFloat(timeVar.getText().toString());
-                        rate=Float.parseFloat(rateVar.getText().toString());
+                        //=========================Converting user input to double==============================//
+                        principle=Double.parseDouble(principleVar.getText().toString());
+                        time=Double.parseDouble(timeVar.getText().toString());
+                        rate=Double.parseDouble(rateVar.getText().toString());
 
                         if(spin.getSelectedItem().toString()=="simple interest")
                         {

@@ -58,10 +58,10 @@ public class LoanActivity extends AppCompatActivity {
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(calc.getWindowToken(), 0);
 
-                float payment =0, interest_paid=0,temp_payment=0,temp_interest_paid=0;
-                float amt = 0, time=0,rate=0;
-                float rate_per_month=0,num_of_months=0,temp=0;
-                float power_variable=0;
+                double payment =0, interest_paid=0,temp_payment=0,temp_interest_paid=0;
+                double amt = 0, time=0,rate=0;
+                double rate_per_month=0,num_of_months=0,temp=0;
+                double power_variable=0;
 
                 if (loan_amount.getText().toString().equals("")) {
                     loan_amount.setError("Enter value");
@@ -75,17 +75,17 @@ public class LoanActivity extends AppCompatActivity {
                 else {
 
                     try {
-                        amt = Float.parseFloat(loan_amount.getText().toString());
-                        time = Float.parseFloat(loan_time.getText().toString());
-                        rate = Float.parseFloat(loan_rate.getText().toString());
+                        amt = Double.parseDouble(loan_amount.getText().toString());
+                        time = Double.parseDouble(loan_time.getText().toString());
+                        rate = Double.parseDouble(loan_rate.getText().toString());
                         rate_per_month = rate / 1200;
                         num_of_months = time * 12;
                         temp = rate_per_month + 1;
-                        power_variable = (float) Math.pow(temp, num_of_months);
+                        power_variable = (double) Math.pow(temp, num_of_months);
                         temp_payment = (amt * rate_per_month * power_variable) / (power_variable - 1);
-                        payment = (float) (Math.round(temp_payment * 100.00) / 100.00);
+                        payment = (double) (Math.round(temp_payment * 100.00) / 100.00);
                         temp_interest_paid = (num_of_months * payment) - amt;
-                        interest_paid = (float) (Math.round(temp_interest_paid * 100.00) / 100.00);
+                        interest_paid = (double) (Math.round(temp_interest_paid * 100.00) / 100.00);
 
                     } catch (NumberFormatException e) {
                         e.printStackTrace();

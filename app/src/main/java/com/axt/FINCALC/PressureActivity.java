@@ -63,25 +63,25 @@ public class PressureActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    float inputValue=Float.parseFloat(input.getText().toString());
-                    float atm=0,bar=0,ft=0,hg=0,Pascal=0;
+                    double inputValue=Double.parseDouble(input.getText().toString());
+                    double atm=0,bar=0,ft=0,hg=0,Pascal=0;
                     //=================Converting any given unit of pressure into atm===================//
                     if (spin.getSelectedItem().toString() == "atm")
                         atm=inputValue;
                     else if(spin.getSelectedItem().toString()=="bar")
-                        atm= (float) (inputValue/1.013);
+                        atm= (double) (inputValue/1.013);
                     else if(spin.getSelectedItem().toString()=="ft. H20")
-                        atm= (float) ((float) inputValue*0.029499793782403822);
+                        atm= (double) ((double) inputValue*0.029499793782403822);
                     else if(spin.getSelectedItem().toString()=="mm Hg")
                         atm=inputValue/760;
                     else if(spin.getSelectedItem().toString()=="Pascal")
                         atm=inputValue/101325;
 
                     //============Converting atm to other units===================================//
-                    bar= (float) (atm*1.013);
-                    ft= (float) (atm*33.899524252);
-                    hg= (float) (atm*760);
-                    Pascal= (float)(atm*101325);
+                    bar= (double) (atm*1.013);
+                    ft= (double) (atm*33.899524252);
+                    hg= (double) (atm*760);
+                    Pascal= (double)(atm*101325);
 
                     //=================Output the results=============================================//
                     atmVar.setText(String.format("%.2f",atm));

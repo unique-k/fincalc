@@ -59,15 +59,15 @@ public class TipActivity extends AppCompatActivity {
                     people.setError("Enter Value");
                 else
                 {
-                    float inputBillVar = Float.parseFloat(billA.getText().toString());
-                    float tipVar = Float.parseFloat(tip.getText().toString());
+                    double inputBillVar = Double.parseDouble(billA.getText().toString());
+                    double tipVar = Double.parseDouble(tip.getText().toString());
                     if (tipVar <= 0) {
                         tipVar = 1;
                         splitOut.setText("1");
                     }
-                    float numVar = Float.parseFloat(people.getText().toString());
+                    double numVar = Double.parseDouble(people.getText().toString());
 
-                    float totalAmount = 0, tipsAmount = 0, splitAmount = 0;
+                    double totalAmount = 0, tipsAmount = 0, splitAmount = 0;
 
                     totalAmount = inputBillVar + ((tipVar / 100) * inputBillVar);
                     tipsAmount = (tipVar / 100) * inputBillVar;
