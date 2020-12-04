@@ -64,30 +64,34 @@ public class InterestActivity extends AppCompatActivity {
                     rateVar.setError("Enter Value");
                 else
                 {
-                    //if()
-                    //=========================Converting user input to float==============================//
-                    principle=Float.parseFloat(principleVar.getText().toString());
-                    time=Float.parseFloat(timeVar.getText().toString());
-                    rate=Float.parseFloat(rateVar.getText().toString());
+                    if(Double.parseDouble(timeVar.getText().toString())>100)
+                        timeVar.setError("time can't be more than 100 years");
+                    else
+                    {
+                        //=========================Converting user input to float==============================//
+                        principle=Float.parseFloat(principleVar.getText().toString());
+                        time=Float.parseFloat(timeVar.getText().toString());
+                        rate=Float.parseFloat(rateVar.getText().toString());
 
-                    if(spin.getSelectedItem().toString()=="simple interest")
-                    {
-                        totalInterest=(principle*time*rate)/100;
-                        totalAmount=totalInterest+principle;
+                        if(spin.getSelectedItem().toString()=="simple interest")
+                        {
+                            totalInterest=(principle*time*rate)/100;
+                            totalAmount=totalInterest+principle;
+                        }
+                        else if(spin.getSelectedItem().toString()=="compounded semi-annually")
+                        {
+                            totalAmount= (double) (principle*(Math.pow((1+(rate/200)),(2*time))));
+                            totalInterest=totalAmount-principle;
+                        }
+                        else if(spin.getSelectedItem().toString()=="compounded annually")
+                        {
+                            totalAmount= (double) (principle*(Math.pow((1+(rate/100)),time)));
+                            totalInterest=totalAmount-principle;
+                        }
+                       //=========================Displaying Results==============================//
+                        totalAmountOut.setText(String.valueOf(totalAmount));
+                        totalInterestOut.setText(String.valueOf(totalInterest));
                     }
-                    else if(spin.getSelectedItem().toString()=="compounded semi-annually")
-                    {
-                        totalAmount= (double) (principle*(Math.pow((1+(rate/200)),(2*time))));
-                        totalInterest=totalAmount-principle;
-                    }
-                    else if(spin.getSelectedItem().toString()=="compounded annually")
-                    {
-                        totalAmount= (double) (principle*(Math.pow((1+(rate/100)),time)));
-                        totalInterest=totalAmount-principle;
-                    }
-                   //=========================Displaying Results==============================//
-                    totalAmountOut.setText(String.valueOf(totalAmount));
-                    totalInterestOut.setText(String.valueOf(totalInterest));
                 }
             }
         });
