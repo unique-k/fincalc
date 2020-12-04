@@ -47,6 +47,7 @@ public class MassActivity extends AppCompatActivity {
                 slugVar.setText("");
                 poundsVar.setText("");
                 tonsVar.setText("");
+                input.setText("");
             }
         });
 
