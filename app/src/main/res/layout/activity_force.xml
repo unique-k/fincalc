@@ -21,19 +21,6 @@
         app:layout_constraintVertical_bias="0.278" />
 
     <TextView
-        android:id="@+id/celciusAnswer2"
-        android:layout_width="191dp"
-        android:layout_height="54dp"
-        android:textColor="#673AB7"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.877"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657" />
-
-    <TextView
         android:id="@+id/textView13"
         android:layout_width="143dp"
         android:layout_height="49dp"
@@ -49,17 +36,17 @@
 
     <TextView
         android:id="@+id/NewtonAnswer"
-        android:layout_width="192dp"
-        android:layout_height="52dp"
+        android:layout_width="193dp"
+        android:layout_height="46dp"
         android:fontFamily="@font/el_messiri"
         android:textColor="#673AB7"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintHorizontal_bias="0.889"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533" />
+        app:layout_constraintVertical_bias="0.54" />
 
     <EditText
         android:id="@+id/forceInput"
@@ -87,19 +74,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.652" />
-
-    <TextView
-        android:id="@+id/barAnswer2"
-        android:layout_width="191dp"
-        android:layout_height="54dp"
-        android:textColor="#673AB7"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.877"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657" />
 
     <Spinner
         android:id="@+id/forceSpinner"
@@ -129,7 +103,7 @@
     <TextView
         android:id="@+id/kipAnswer"
         android:layout_width="191dp"
-        android:layout_height="54dp"
+        android:layout_height="43dp"
         android:textColor="#673AB7"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -154,27 +128,14 @@
         app:layout_constraintVertical_bias="0.392" />
 
     <TextView
-        android:id="@+id/celciusAnswer3"
-        android:layout_width="191dp"
-        android:layout_height="54dp"
-        android:textColor="#673AB7"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.877"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657" />
-
-    <TextView
         android:id="@+id/dyneAnswer"
-        android:layout_width="191dp"
-        android:layout_height="54dp"
+        android:layout_width="193dp"
+        android:layout_height="43dp"
         android:textColor="#673AB7"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintHorizontal_bias="0.881"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.657" />
@@ -225,7 +186,7 @@
     <TextView
         android:id="@+id/poundAnswer"
         android:layout_width="191dp"
-        android:layout_height="54dp"
+        android:layout_height="45dp"
         android:textColor="#673AB7"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

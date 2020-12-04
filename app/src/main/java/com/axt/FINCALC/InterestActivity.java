@@ -91,8 +91,8 @@ public class InterestActivity extends AppCompatActivity {
                             totalInterest=totalAmount-principle;
                         }
                        //=========================Displaying Results==============================//
-                        totalAmountOut.setText(String.valueOf(totalAmount));
-                        totalInterestOut.setText(String.valueOf(totalInterest));
+                        totalAmountOut.setText(String.valueOf(Math.round(totalAmount*100.00)/100.00));
+                        totalInterestOut.setText(String.valueOf(Math.round(totalInterest*100.00)/100.00));
                     }
                 }
             }

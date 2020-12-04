@@ -61,11 +61,12 @@ public class TipActivity extends AppCompatActivity {
                 {
                     double inputBillVar = Double.parseDouble(billA.getText().toString());
                     double tipVar = Double.parseDouble(tip.getText().toString());
-                    if (tipVar <= 0) {
-                        tipVar = 1;
-                        splitOut.setText("1");
-                    }
                     double numVar = Double.parseDouble(people.getText().toString());
+                    if (numVar <= 0) {
+                        numVar = 1;
+                        people.setText("1");
+                    }
+
 
                     double totalAmount = 0, tipsAmount = 0, splitAmount = 0;
 
@@ -73,10 +74,10 @@ public class TipActivity extends AppCompatActivity {
                     tipsAmount = (tipVar / 100) * inputBillVar;
                     splitAmount = totalAmount / numVar;
 
-                    //==============Output=====================//
-                    totalOut.setText(String.valueOf(totalAmount));
-                    tipsOut.setText(String.valueOf(tipsAmount));
-                    splitOut.setText(String.valueOf(splitAmount));
+                    //=================================Output==============================//
+                    totalOut.setText(String.valueOf(Math.round(totalAmount*100.00)/100.00));
+                    tipsOut.setText(String.valueOf(Math.round(tipsAmount*100.00)/100.00));
+                    splitOut.setText(String.valueOf(Math.round(splitAmount*100.00)/100.00));
             }
 
             }

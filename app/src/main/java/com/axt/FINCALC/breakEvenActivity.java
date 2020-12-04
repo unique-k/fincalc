@@ -42,7 +42,7 @@ public class breakEvenActivity extends AppCompatActivity {
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
                 double fixedCost,revenue, variableCost;
-                double breakEvenPoint=0;
+                int breakEvenPoint=0;
 
                 if(fixedVar.getText().toString().equals(""))
                     fixedVar.setError("Enter Value");
@@ -57,20 +57,12 @@ public class breakEvenActivity extends AppCompatActivity {
                     revenue=Double.parseDouble(revenueVar.getText().toString());
                     variableCost=Double.parseDouble(variableVar.getText().toString());
 
-                    breakEvenPoint= fixedCost/(revenue-variableCost);
                     if(revenue<variableCost)
-                    {
                         revenueVar.setError("should be higher than variable cost");
-                        /*AlertDialog.Builder builder= new AlertDialog.Builder(breakEvenActivity.this);
-                        builder.setMessage("Invalid Revenue")
-                                .setNegativeButton("Cancel",null);
-
-                        AlertDialog alert =builder.create();
-                        alert.show();*/
-                    }
                     else
                     {
-                        brOutputVar.setText(revenueVar.getText());
+                        breakEvenPoint= (int) Math.ceil(fixedCost/(revenue-variableCost));
+                        brOutputVar.setText(String.valueOf(breakEvenPoint));
                     }
                 }
             }

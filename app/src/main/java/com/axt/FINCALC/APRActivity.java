@@ -52,7 +52,7 @@ public class APRActivity extends AppCompatActivity {
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
 
-                double loan,term,rate,charges,apr=0,monthlyPayment=0,totalPayment=0;
+                float loan,term,rate,charges,apr=0,monthlyPayment=0,totalPayment=0;
 
                 if (loanVar.getText().toString().equals(""))
                     loanVar.setError("Enter value");
@@ -64,26 +64,26 @@ public class APRActivity extends AppCompatActivity {
                     chargesVar.setError("Enter value");
                 else {
 
-                    if(Double.parseDouble(termVar.getText().toString())>100)
+                    if(Float.parseFloat(termVar.getText().toString())>100)
                         termVar.setError("term should be less than 100");
-                    else if(Double.parseDouble(rateVar.getText().toString())>100)
+                    else if(Float.parseFloat(rateVar.getText().toString())>100)
                         rateVar.setError("rate should be less than 100");
                     else {
 
                         try {
-                            loan = Double.parseDouble(loanVar.getText().toString());
-                            term = Double.parseDouble(termVar.getText().toString());
-                            rate = Double.parseDouble(rateVar.getText().toString());
-                            charges = Double.parseDouble(chargesVar.getText().toString());
+                            loan = Float.parseFloat(loanVar.getText().toString());
+                            term = Float.parseFloat(termVar.getText().toString());
+                            rate = Float.parseFloat(rateVar.getText().toString());
+                            charges = Float.parseFloat(chargesVar.getText().toString());
                             apr = (((((loan + charges) * rate * term) / 100) + charges) / (loan * term)) * 100;
-                            monthlyPayment = (double) ((loan * (apr / 1200)) / (1 - Math.pow(1 + (apr / 1200), -12 * term)));
+                            monthlyPayment = (float) ((loan * (apr / 1200)) / (1 - Math.pow(1 + (apr / 1200), -12 * term)));
                             totalPayment = monthlyPayment * 12 * term;
                         } catch (NumberFormatException e) {
                             e.printStackTrace();
                         }
-                        aprOut.setText(String.valueOf(apr));
-                        monthlyPaymentOut.setText(String.valueOf(monthlyPayment));
-                        totalPaymentOut.setText(String.valueOf(totalPayment));
+                        aprOut.setText(String.valueOf(Math.round(apr*100.00)/100.00));
+                        monthlyPaymentOut.setText(String.valueOf(Math.round(monthlyPayment*100.00)/100.00));
+                        totalPaymentOut.setText(String.valueOf(Math.round(totalPayment*100.00)/100.00));
                     }
                 }
 

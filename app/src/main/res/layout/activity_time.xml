@@ -23,8 +23,8 @@
 
     <TextView
         android:id="@+id/yearAnswer"
-        android:layout_width="186dp"
-        android:layout_height="54dp"
+        android:layout_width="197dp"
+        android:layout_height="55dp"
         android:fontFamily="@font/el_messiri"
         android:textColor="#673AB7"
         android:textSize="24sp"
@@ -37,8 +37,8 @@
 
     <TextView
         android:id="@+id/hoursAnswers"
-        android:layout_width="186dp"
-        android:layout_height="54dp"
+        android:layout_width="194dp"
+        android:layout_height="51dp"
         android:fontFamily="@font/el_messiri"
         android:textColor="#673AB7"
         android:textSize="24sp"
@@ -51,8 +51,8 @@
 
     <TextView
         android:id="@+id/secondAnswer"
-        android:layout_width="186dp"
-        android:layout_height="54dp"
+        android:layout_width="194dp"
+        android:layout_height="53dp"
         android:fontFamily="@font/el_messiri"
         android:textColor="#673AB7"
         android:textSize="24sp"
@@ -65,8 +65,8 @@
 
     <TextView
         android:id="@+id/minutesAnswer"
-        android:layout_width="186dp"
-        android:layout_height="54dp"
+        android:layout_width="194dp"
+        android:layout_height="51dp"
         android:fontFamily="@font/el_messiri"
         android:textColor="#673AB7"
         android:textSize="24sp"
@@ -147,8 +147,8 @@
 
     <TextView
         android:id="@+id/daysAnswer"
-        android:layout_width="186dp"
-        android:layout_height="54dp"
+        android:layout_width="196dp"
+        android:layout_height="53dp"
         android:fontFamily="@font/el_messiri"
         android:textColor="#673AB7"
         android:textSize="24sp"

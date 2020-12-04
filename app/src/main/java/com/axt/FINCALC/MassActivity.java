@@ -63,25 +63,25 @@ public class MassActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    double inputValue=Double.parseDouble(input.getText().toString());
-                    double kg=0,grams=0,slugs=0,pounds=0,tons=0;
+                    float inputValue=Float.parseFloat(input.getText().toString());
+                    float kg=0,grams=0,slugs=0,pounds=0,tons=0;
                     //=================Converting any given unit of mass into kilograms===================//
                     if (spin.getSelectedItem().toString() == "kilograms")
                         kg=inputValue;
                     else if(spin.getSelectedItem().toString()=="grams")
-                        kg= (double) (inputValue/1000);
+                        kg= (float) (inputValue/1000);
                     else if(spin.getSelectedItem().toString()=="slugs")
-                        kg= (double) ((double) inputValue*14.594);
+                        kg= (float) ((float) inputValue*14.594);
                     else if(spin.getSelectedItem().toString()=="pounds")
-                        kg= (double) (inputValue/2.205);
+                        kg= (float) (inputValue/2.205);
                     else if(spin.getSelectedItem().toString()=="US tons")
                         kg=inputValue*907;
 
                     //============Converting atm to other units===================================//
-                    slugs= (double) (kg/14.594);
-                    tons= (double) (kg/907);
-                    pounds= (double) (kg*2.205);
-                    grams= (double)(kg*1000);
+                    slugs= (float) (kg/14.594);
+                    tons= (float) (kg/907);
+                    pounds= (float) (kg*2.205);
+                    grams= (float)(kg*1000);
 
                     //=================Output the results=============================================//
                     kgVar.setText(String.valueOf(kg));

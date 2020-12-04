@@ -64,8 +64,8 @@ public class timeActivity extends AppCompatActivity {
                 }
                 else {
 
-                    double inputNum = Double.parseDouble(input.getText().toString()); // converting input into a double
-                    double minutes = 0, hours = 0, days = 0, years = 0, seconds = 0; // initializing output values to be 0
+                    float inputNum = Float.parseFloat(input.getText().toString()); // converting input into a double
+                    float minutes = 0, hours = 0, days = 0, years = 0, seconds = 0; // initializing output values to be 0
                     //=================Converting any given unit of time in seconds===================//
                     if (spin.getSelectedItem().toString() == "seconds")
                         seconds = inputNum;
@@ -83,6 +83,12 @@ public class timeActivity extends AppCompatActivity {
                     years = days / 365;
                     minutes = seconds / 60;
                     //=================Output the results=============================================//
+                    /*minute.setText(String.valueOf(Math.round(minutes*100.00)/100.00));
+                    second.setText(String.valueOf(Math.round(seconds*100.00)/100.00));
+                    hour.setText(String.valueOf(Math.round(hours*100.00)/100.00));
+                    day.setText(String.valueOf(Math.round(days*100.00)/100.00));
+                    year.setText(String.valueOf(Math.round(years*100.00)/100.00));
+                    */
                     minute.setText(String.valueOf(minutes));
                     second.setText(String.valueOf(seconds));
                     hour.setText(String.valueOf(hours));

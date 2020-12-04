@@ -55,33 +55,33 @@ public class temperatureActivity extends AppCompatActivity {
             public void onClick(View v) {
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
-                double a= (double) (9.0/5.0);
-                double b= (double) (5.0/9.0);
+                float a= (float) (9.0/5.0);
+                float b= (float) (5.0/9.0);
 
                 if (input.getText().toString().equals("")) {
                     input.setError("Enter value");
                 }
                 else
                 {
-                    double inputValue=Double.parseDouble(input.getText().toString());
-                    double celsius=0,fahrenheit=0,kelvin=0,rankine=0;
+                    float inputValue=Float.parseFloat(input.getText().toString());
+                    float celsius=0,fahrenheit=0,kelvin=0,rankine=0;
                     //=================Converting any given unit of tempr in kelvin===================//
                     if (spin.getSelectedItem().toString() == "celsius"){
-                        kelvin= (double) (inputValue+273.15);
+                        kelvin= (float) (inputValue+273.15);
                     }
                     else if(spin.getSelectedItem().toString()=="kelvin") {
                         kelvin=inputValue;
                     }
                     else if(spin.getSelectedItem().toString()=="fahrenheit"){
-                        kelvin= (double) ((inputValue+459.67)*(b));
+                        kelvin= (float) ((inputValue+459.67)*(b));
                     }
                     else if(spin.getSelectedItem().toString()=="rankine"){
                         kelvin=inputValue*(b);
                     }
                     //============Converting seconds to other units===================================//
-                    fahrenheit= (double) ((kelvin*(a))-459.67);
+                    fahrenheit= (float) ((kelvin*(a))-459.67);
                     rankine=kelvin*(a);
-                    celsius= (double) (kelvin-273.15);
+                    celsius= (float) (kelvin-273.15);
 
                     //=================Output the results=============================================//
                     celsiusOut.setText(String.format("%.2f",celsius));
