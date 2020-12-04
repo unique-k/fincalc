@@ -73,6 +73,10 @@ public class LoanActivity extends AppCompatActivity {
                     loan_rate.setError("Enter value");
                 }
                 else {
+                    if(Double.parseDouble(loan_time.getText().toString())>100)
+                        loan_time.setError("Loan time must be less than 100 years.");
+                    if(Double.parseDouble(loan_rate.getText().toString())>100)
+                        loan_rate.setError("Loan rate must be less than 100%");
 
                     try {
                         amt = Double.parseDouble(loan_amount.getText().toString());
