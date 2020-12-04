@@ -64,20 +64,27 @@ public class APRActivity extends AppCompatActivity {
                     chargesVar.setError("Enter value");
                 else {
 
-                    try {
-                        loan = Double.parseDouble(loanVar.getText().toString());
-                        term = Double.parseDouble(termVar.getText().toString());
-                        rate = Double.parseDouble(rateVar.getText().toString());
-                        charges = Double.parseDouble(chargesVar.getText().toString());
-                        apr=(((((loan+charges)*rate*term)/100)+charges)/(loan*term))*100;
-                        monthlyPayment= (double) ((loan*(apr/1200))/(1-Math.pow(1+(apr/1200),-12*term)));
-                        totalPayment=monthlyPayment*12*term;
-                    } catch (NumberFormatException e) {
-                        e.printStackTrace();
+                    if(Double.parseDouble(termVar.getText().toString())>100)
+                        termVar.setError("term should be less than 100");
+                    else if(Double.parseDouble(rateVar.getText().toString())>100)
+                        rateVar.setError("rate should be less than 100");
+                    else {
+
+                        try {
+                            loan = Double.parseDouble(loanVar.getText().toString());
+                            term = Double.parseDouble(termVar.getText().toString());
+                            rate = Double.parseDouble(rateVar.getText().toString());
+                            charges = Double.parseDouble(chargesVar.getText().toString());
+                            apr = (((((loan + charges) * rate * term) / 100) + charges) / (loan * term)) * 100;
+                            monthlyPayment = (double) ((loan * (apr / 1200)) / (1 - Math.pow(1 + (apr / 1200), -12 * term)));
+                            totalPayment = monthlyPayment * 12 * term;
+                        } catch (NumberFormatException e) {
+                            e.printStackTrace();
+                        }
+                        aprOut.setText(String.valueOf(apr));
+                        monthlyPaymentOut.setText(String.valueOf(monthlyPayment));
+                        totalPaymentOut.setText(String.valueOf(totalPayment));
                     }
-                    aprOut.setText(String.valueOf(apr));
-                    monthlyPaymentOut.setText(String.valueOf(monthlyPayment));
-                    totalPaymentOut.setText(String.valueOf(totalPayment));
                 }
 
             }

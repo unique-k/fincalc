@@ -66,7 +66,7 @@ public class InterestActivity extends AppCompatActivity {
                 {
                     if(Double.parseDouble(timeVar.getText().toString())>100)
                         timeVar.setError("time can't be more than 100 years");
-                    if(Double.parseDouble(rateVar.getText().toString())>100)
+                    else if(Double.parseDouble(rateVar.getText().toString())>100)
                         rateVar.setError("rate can't exceed 100");
                     else
                     {

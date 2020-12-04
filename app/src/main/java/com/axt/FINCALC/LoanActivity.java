@@ -75,28 +75,30 @@ public class LoanActivity extends AppCompatActivity {
                 else {
                     if(Double.parseDouble(loan_time.getText().toString())>100)
                         loan_time.setError("Loan time must be less than 100 years.");
-                    if(Double.parseDouble(loan_rate.getText().toString())>100)
+                    else if(Double.parseDouble(loan_rate.getText().toString())>100)
                         loan_rate.setError("Loan rate must be less tha 100%");
+                    else{
+                        try {
+                            amt = Double.parseDouble(loan_amount.getText().toString());
+                            time = Double.parseDouble(loan_time.getText().toString());
+                            rate = Double.parseDouble(loan_rate.getText().toString());
+                            rate_per_month = rate / 1200;
+                            num_of_months = time * 12;
+                            temp = rate_per_month + 1;
+                            power_variable = (double) Math.pow(temp, num_of_months);
+                            temp_payment = (amt * rate_per_month * power_variable) / (power_variable - 1);
+                            payment = (double) (Math.round(temp_payment * 100.00) / 100.00);
+                            temp_interest_paid = (num_of_months * payment) - amt;
+                            interest_paid = (double) (Math.round(temp_interest_paid * 100.00) / 100.00);
 
-                    try {
-                        amt = Double.parseDouble(loan_amount.getText().toString());
-                        time = Double.parseDouble(loan_time.getText().toString());
-                        rate = Double.parseDouble(loan_rate.getText().toString());
-                        rate_per_month = rate / 1200;
-                        num_of_months = time * 12;
-                        temp = rate_per_month + 1;
-                        power_variable = (double) Math.pow(temp, num_of_months);
-                        temp_payment = (amt * rate_per_month * power_variable) / (power_variable - 1);
-                        payment = (double) (Math.round(temp_payment * 100.00) / 100.00);
-                        temp_interest_paid = (num_of_months * payment) - amt;
-                        interest_paid = (double) (Math.round(temp_interest_paid * 100.00) / 100.00);
+                        } catch (NumberFormatException e) {
+                            e.printStackTrace();
+                        }
 
-                    } catch (NumberFormatException e) {
-                        e.printStackTrace();
+                        result_principle.setText(String.valueOf(payment));
+                        result_interest.setText(String.valueOf(interest_paid));
                     }
 
-                    result_principle.setText(String.valueOf(payment));
-                    result_interest.setText(String.valueOf(interest_paid));
                 }
 
             }
