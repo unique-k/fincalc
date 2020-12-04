@@ -54,7 +54,7 @@ public class InterestActivity extends AppCompatActivity {
             public void onClick(View v) {
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
-                float principle,time,rate,totalAmount = 0,totalInterest=0;
+                double principle,time,rate,totalAmount = 0,totalInterest=0;
 
                 if(principleVar.getText().toString().equals(""))
                     principleVar.setError("Enter Value");
@@ -64,7 +64,7 @@ public class InterestActivity extends AppCompatActivity {
                     rateVar.setError("Enter Value");
                 else
                 {
-
+                    //if()
                     //=========================Converting user input to float==============================//
                     principle=Float.parseFloat(principleVar.getText().toString());
                     time=Float.parseFloat(timeVar.getText().toString());
@@ -77,12 +77,12 @@ public class InterestActivity extends AppCompatActivity {
                     }
                     else if(spin.getSelectedItem().toString()=="compounded semi-annually")
                     {
-                        totalAmount= (float) (principle*(Math.pow((1+(rate/200)),(2*time))));
+                        totalAmount= (double) (principle*(Math.pow((1+(rate/200)),(2*time))));
                         totalInterest=totalAmount-principle;
                     }
                     else if(spin.getSelectedItem().toString()=="compounded annually")
                     {
-                        totalAmount= (float) (principle*(Math.pow((1+(rate/100)),time)));
+                        totalAmount= (double) (principle*(Math.pow((1+(rate/100)),time)));
                         totalInterest=totalAmount-principle;
                     }
                    //=========================Displaying Results==============================//

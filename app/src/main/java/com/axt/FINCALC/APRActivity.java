@@ -52,7 +52,7 @@ public class APRActivity extends AppCompatActivity {
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
 
-                float loan,term,rate,charges,apr=0,monthlyPayment=0,totalPayment=0;
+                double loan,term,rate,charges,apr=0,monthlyPayment=0,totalPayment=0;
 
                 if (loanVar.getText().toString().equals(""))
                     loanVar.setError("Enter value");
@@ -70,7 +70,7 @@ public class APRActivity extends AppCompatActivity {
                         rate = Float.parseFloat(rateVar.getText().toString());
                         charges = Float.parseFloat(chargesVar.getText().toString());
                         apr=(((((loan+charges)*rate*term)/100)+charges)/(loan*term))*100;
-                        monthlyPayment= (float) ((loan*(apr/1200))/(1-Math.pow(1+(apr/1200),-12*term)));
+                        monthlyPayment= (double) ((loan*(apr/1200))/(1-Math.pow(1+(apr/1200),-12*term)));
                         totalPayment=monthlyPayment*12*term;
                     } catch (NumberFormatException e) {
                         e.printStackTrace();

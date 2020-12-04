@@ -41,7 +41,7 @@ public class breakEvenActivity extends AppCompatActivity {
             public void onClick(View v) {
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(calculate.getWindowToken(), 0);
-                float fixedCost,revenue, variableCost;
+                double fixedCost,revenue, variableCost;
                 int breakEvenPoint=0;
 
                 if(fixedVar.getText().toString().equals(""))
