@@ -7,19 +7,6 @@
     tools:context=".TipActivity">
 
     <EditText
-        android:id="@+id/numOfPeople"
-        android:layout_width="148dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.817"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377" />
-
-    <EditText
         android:id="@+id/tipPercent"
         android:layout_width="148dp"
         android:layout_height="42dp"
@@ -206,5 +193,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
+
+    <EditText
+        android:id="@+id/numOfPeople"
+        android:layout_width="148dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
