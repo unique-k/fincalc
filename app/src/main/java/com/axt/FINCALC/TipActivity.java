@@ -59,31 +59,25 @@ public class TipActivity extends AppCompatActivity {
                     people.setError("Enter Value");
                 else
                 {
-                    if(Double.parseDouble(tip.getText().toString())>100)
-                        tip.setError("can't be more than 100");
-                    else
-                    {
-                        double inputBillVar = Double.parseDouble(billA.getText().toString());
-                        double tipVar = Double.parseDouble(tip.getText().toString());
-                        int numVar = Integer.parseInt(people.getText().toString());
-                        if (numVar == 0) {
-                            numVar=1;
-                            people.setError("number of people cannot be 0");
-                        }
-
-
-                        double totalAmount = 0, tipsAmount = 0, splitAmount = 0;
-
-                        totalAmount = inputBillVar + ((tipVar / 100) * inputBillVar);
-                        tipsAmount = (tipVar / 100) * inputBillVar;
-                        splitAmount = totalAmount / numVar;
-
-                        //==============Output=====================//
-                        totalOut.setText(String.valueOf(totalAmount));
-                        tipsOut.setText(String.valueOf(tipsAmount));
-                        splitOut.setText(String.valueOf(splitAmount));
+                    double inputBillVar = Double.parseDouble(billA.getText().toString());
+                    double tipVar = Double.parseDouble(tip.getText().toString());
+                    if (tipVar <= 0) {
+                        tipVar = 1;
+                        splitOut.setText("1");
                     }
-                }
+                    double numVar = Double.parseDouble(people.getText().toString());
+
+                    double totalAmount = 0, tipsAmount = 0, splitAmount = 0;
+
+                    totalAmount = inputBillVar + ((tipVar / 100) * inputBillVar);
+                    tipsAmount = (tipVar / 100) * inputBillVar;
+                    splitAmount = totalAmount / numVar;
+
+                    //==============Output=====================//
+                    totalOut.setText(String.valueOf(totalAmount));
+                    tipsOut.setText(String.valueOf(tipsAmount));
+                    splitOut.setText(String.valueOf(splitAmount));
+            }
 
             }
         });
