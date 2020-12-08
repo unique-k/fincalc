@@ -1,3 +1,1 @@
-# firsttry
-
-This is first ever attempt by our group to make a android application. 
+Android app development project FALL 2020 @ UTA
